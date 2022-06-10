@@ -1,22 +1,29 @@
 #include "main.h"
 
 /**
- * print_most_numbers - Entry point
- * description - prints  the numbers, from 0 to 9, followed by a new line
+ * more_numbers - Entry point
+ * description - prints 10 time the number, frm 0 to 14, followed by a new line
  * Return: void
  */
 
-void print_most_numbers(void)
+void more_numbers(void)
 {
-	char c = 0;
+	char n, c;
+	int i = 0;
 
-	while (c <= 9)
+	while (i < 10)
 	{
-		if (c != 2 && c != 4)
+		for (n = 0; n <= 14; n++)
 		{
+			c = n;
+			if (n > 9)
+			{
+				_putchar('1');
+				c = n % 10;
+			}
 			_putchar('0' + c);
 		}
-		c++;
+		_putchar('\n');
+		i++;
 	}
-	_putchar('\n');
 }
